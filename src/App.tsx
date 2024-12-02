@@ -1,12 +1,11 @@
 import { ParallaxProvider } from "react-scroll-parallax";
-import { Example } from "./components/example";
+import { Top } from "./Page/Top";
 
 function App() {
   return (
     <>
       <ParallaxProvider>
-        <Example />
-        {/* <Top /> */}
+        <Top />
       </ParallaxProvider>
     </>
   );

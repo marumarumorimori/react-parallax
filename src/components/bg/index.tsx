@@ -1,9 +1,11 @@
+import styles from "./style.module.scss";
 import { BannerLayer, ParallaxBanner } from "react-scroll-parallax";
+import DotImage from "../../image/dot.png";
+import MixedImage from "../../image/Mixed.png";
 
 export const Bg = () => {
   const background: BannerLayer = {
-    image:
-      "https://s3-us-west-2.amazonaws.com/s.cdpn.io/105988/banner-background.jpg",
+    image: DotImage,
     translateY: [0, 50],
     opacity: [1, 0.3],
     scale: [1.05, 1, "easeOutCubic"],
@@ -24,27 +26,17 @@ export const Bg = () => {
     ),
   };
 
-  const foreground: BannerLayer = {
-    image:
-      "https://s3-us-west-2.amazonaws.com/s.cdpn.io/105988/banner-foreground.png",
-    translateY: [0, 15],
-    scale: [1, 1.1, "easeOutCubic"],
-    shouldAlwaysCompleteAnimation: true,
-  };
-
   const gradientOverlay: BannerLayer = {
-    opacity: [0, 0.9],
+    opacity: [0, 0.2],
     shouldAlwaysCompleteAnimation: true,
     expanded: false,
-    children: (
-      <div className="absolute inset-0 bg-gradient-to-t from-gray-900 to-blue-900" />
-    ),
+    children: <div className="absolute inset-0 bg-gradient-to-t" />,
   };
 
   return (
     <ParallaxBanner
-      layers={[background, headline, foreground, gradientOverlay]}
-      className="aspect-[2/1] bg-gray-900"
+      layers={[background, headline, gradientOverlay]}
+      className={styles.banner}
     />
   );
 };

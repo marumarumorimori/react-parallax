@@ -1,0 +1,35 @@
+.container {
+  min-height: 5500px;
+  position: relative;
+  overflow: hidden;
+  width: 100vw;
+}
+.main {
+  padding: 100px;
+  margin-bottom: 200px;
+}
+.bg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+}
+.mvContainer {
+  //   margin-bottom: 300px;
+  //   max-width: 1500px;
+  height: 95vh;
+  margin: 0 auto 0 auto;
+  background-color: rgb(76, 76, 76);
+}
+
+.context {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 1;
+  transition: 1s;
+}
