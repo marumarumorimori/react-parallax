@@ -4,15 +4,20 @@ import { Parallax } from "react-scroll-parallax";
 
 export const Progress = () => {
   const [progress, setProgress] = useState<number>();
-  const [enterd, setEntered] = useState<boolean>();
-  console.log(progress, enterd);
+  const [enter, setEnter] = useState<boolean>();
 
+  console.log("q", progress, enter);
   return (
-    <Parallax
-      onProgressChange={(progress) => setProgress(progress)}
-      onEnter={() => setEntered(true)}
-      onExit={() => setEntered(false)}
-      className={styles.element}
-    />
+    <div
+      className={`${styles.container} ${enter ? styles.light : styles.dark}`}
+    >
+      <Parallax
+        onProgressChange={(p) => setProgress(p)}
+        onEnter={() => setEnter(true)}
+        onExit={() => setEnter(false)}
+        className={styles.progress}
+      />
+      <p className={styles.moji}>moji</p>
+    </div>
   );
 };

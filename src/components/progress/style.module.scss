@@ -1,5 +1,26 @@
-.element {
-  background-color: antiquewhite;
-  width: 100px;
-  height: 100px;
+.container {
+  height: 3000px;
+  padding: 20px;
+  padding: 101vh 0 101vh;
+  transition: 3s;
+  position: relative;
+}
+.dark {
+  background-color: #333;
+}
+.light {
+  background-color: rgb(229, 229, 229);
+}
+.progress {
+  height: 300px;
+  border: 3px solid #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bg {
+  background-color: aqua;
+  height: 200px;
+  width: 100%;
 }

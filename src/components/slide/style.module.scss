@@ -1,16 +1,11 @@
+@mixin box($width, $height) {
+  border: 3px solid #333;
+  width: $width;
+  height: $height;
+}
+
 .container {
   position: relative;
-}
-.text {
-  position: absolute;
-  //   width: 100%;2233
-  overflow: clip;
-
-  font-size: 8rem;
-  top: 50%;
-  transform: translateY(-50%);
-  white-space: nowrap;
-  //   background-color: antiquewhite;
 }
 .slideContainer {
   width: 100%;
@@ -19,29 +14,31 @@
   max-width: 1700px;
   margin: 0 auto;
 }
-.left {
-  background-color: rgb(237, 189, 189);
-  width: 27%;
-  height: 300px;
-  margin-right: 3%;
-}
 
+.left {
+  margin-right: 3%;
+  @include box(27%, 300px);
+}
 .centerRight {
   position: relative;
   width: 70%;
   margin: 0 0 0 auto;
 }
 .center {
-  max-width: 1000px;
-  width: 60%;
-  height: 700px;
-  background-color: rgb(231, 230, 168);
+  @include box(60%, 700px);
 }
 .right {
-  width: 50%;
-  height: 200px;
-  background-color: rgb(238, 232, 182);
+  @include box(50%, 200px);
   position: absolute;
   top: 50px;
   right: 0;
+}
+
+.text {
+  position: absolute;
+  font-size: 8rem;
+  top: 40%;
+  white-space: nowrap;
+  font-style: italic;
+  font-family: serif;
 }

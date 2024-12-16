@@ -1,0 +1,11 @@
+.container {
+  background-color: antiquewhite;
+  width: 100%;
+}
+
+.banner {
+  width: 100vw;
+  background-color: rgb(17 24 39);
+  opacity: 0.9;
+  aspect-ratio: 2/1;
+}
